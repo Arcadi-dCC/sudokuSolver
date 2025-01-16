@@ -10,7 +10,7 @@ local archive for later revisions.
 ![cmd_program_400p](https://github.com/user-attachments/assets/544e72a2-f76d-4a11-8213-bc86837fb7d9)\
 Figure 1. The program solving a sudoku.
 
-The application has been developed entirely with C programming language.
+The application has been developed with C programming language.
 
 # Installation
 Simply download and extract the compressed folder suitable to your machine according to its architecture:
@@ -40,7 +40,7 @@ Figure 2 (left): typical sudoku statement. Figure 3 (right): the same sudoku wri
 > - Nine characters fit inside each quadrant formed by the divisory lines. Each space is for one of the elements in that quadrant.
 > - **The unknown values of the sudoku must be represented as spaces " ". This rule must be followed until the end of the grid in the right-most quadrants, and no more characters should be added past that point.**
 > - Anything below the issued sudoku grid will be ommitted by the program.
-> - The program can only solve one sudoku at a time, so adding multiple sudokus in the statement.txt file will not work.
+> - The program can only solve one sudoku at a time, so adding multiple sudokus in the `statement.txt` file will not work.
 
 **Step 4.** Save and close `statement.txt`.
 
@@ -65,7 +65,7 @@ Note that the program does not check if the sudoku has been solved previosly. Th
 ## Error messages
 If something goes wrong during the solution finding process, the sudoku will appear unsolved in the cmd window. Below, an error message will explain the issue:
 
- - **`There is something wrong with the statement file. Please review it.`** Some of the rules laid out in User Guide>Step 3 [LINK] have not been follow. Please, read them again and modify the formatting of statement.txt according to them.
+ - **`There is something wrong with the statement file. Please review it.`** Some of the rules laid out in [User Guide](user-guide)>Step 3 have not been follow. Please, read them again and modify the formatting of statement.txt according to them.
 
  - **`The sudoku could not be solved.`** Usually, this happens when a statement has too few known elements for it to be solvable. Please review your statement in case that some elements are missing.
 If this is not the case, your sudoku might actually be too difficult! Sudoku Solver is still in an early version and has a hard time dealing with the hardest of sudokus. Sorry for the inconvenience!
@@ -88,13 +88,13 @@ Inside `file.h`, there are a few `#define` that give name to the archive folder,
 > Consider that in C language, the `\` character must be expressed as `\\` and only counts as one character.
 
  - **Name of statement text file**
-   1. Find `#define FILE_STATEMENT_NAME
+   1. Find `#define FILE_STATEMENT_NAME`
    2. Change `"statement.txt"` to `"newname.txt"`.
 > [!WARNING]
 > This will change the name of the new statement files in the archive, but it will also search for a file with the same name in the parent folder when obtaining a statement at the beginning of the program! You should change that file's name too for the program to run properly.
 
  - **Name of solution text file**
-   1. Find `#define FILE_SOLUTION_NAME
+   1. Find `#define FILE_SOLUTION_NAME`
    2. Change `"solution.txt"` to `"newname.txt"`.
 
 If after performing some of these changes and compiling the program, it crashes during runtime, it might be because the path name is too long. Please shorten the names of the directories you are using.  
