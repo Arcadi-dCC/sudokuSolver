@@ -10,6 +10,8 @@ local archive for later revisions.
 ![cmd_program_400p](https://github.com/user-attachments/assets/544e72a2-f76d-4a11-8213-bc86837fb7d9)\
 Figure 1. The program solving a sudoku.
 
+The application has been developed entirely with C programming language.
+
 # Installation
 Simply download and extract the compressed folder suitable to your machine according to its architecture:
  - 32-bit: `sudokuSolver_x86.zip`
