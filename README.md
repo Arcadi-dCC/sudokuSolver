@@ -7,13 +7,13 @@ table is completed. The algorithm is executed directly from a `.exe` file, and t
 solution is shown on the screen. Both statement and solution are also stored in a
 local archive for later revisions.
 
-![cmd_program_350p](https://github.com/user-attachments/assets/87b52b2c-610c-4adc-a093-ecbfefbef3da)\
+![cmd_program_400p](https://github.com/user-attachments/assets/544e72a2-f76d-4a11-8213-bc86837fb7d9)\
 Figure 1. The program solving a sudoku.
 
 # Installation
-Simply download the folder suitable to your machine according to its architecture:
- - 32-bit: `sudokuSolver_x86`
- - 64-bit: `sudokuSolver_x64`
+Simply download and extract the compressed folder suitable to your machine according to its architecture:
+ - 32-bit: `sudokuSolver_x86.zip`
+ - 64-bit: `sudokuSolver_x64.zip`
 
 > From now on, the final part of the names from folders and files, be it `_x86` or `_x64`, will be omitted.
 
@@ -79,24 +79,24 @@ Inside `file.h`, there are a few `#define` that give name to the archive folder,
 
  - **Name and path of the archive folder**
    1. Find `#define FILE_ARCHIVE_PATH`
-   2. Change `".\\archive\\"` to "`whatever\\the\\path\\newname\\"`. To keep the archive in the `sudokuSolver` directory but changing the archive name, keep the relative path and just change to `".\\newname"`.
+   2. Change `".\\archive\\"` to `"whatever\\the\\path\\newname\\"`. To keep the archive in the `sudokuSolver` directory but changing the archive name, keep the relative path and just change to `".\\newname"`.
    3. Find `#define FILE_ARCHIVE_PATH_LEN`
-   4. Update the length in characters of the path
+   4. Update the length in characters of the path.
 > [!NOTE]
 > Consider that in C language, the `\` character must be expressed as `\\` and only counts as one character.
 
  - **Name of statement text file**
    1. Find `#define FILE_STATEMENT_NAME
-   2. Change "statement.txt"` to `"newname.txt"`.
+   2. Change `"statement.txt"` to `"newname.txt"`.
 > [!WARNING]
 > This will change the name of the new statement files in the archive, but it will also search for a file with the same name in the parent folder when obtaining a statement at the beginning of the program! You should change that file's name too for the program to run properly.
 
  - **Name of solution text file**
    1. Find `#define FILE_SOLUTION_NAME
-   2. Change "solution.txt"` to `"newname.txt"`.
+   2. Change `"solution.txt"` to `"newname.txt"`.
 
 If after performing some of these changes and compiling the program, it crashes during runtime, it might be because the path name is too long. Please shorten the names of the directories you are using.  
 
 # Disclaimers
 Sudoku Solver is still in an early version, and struggles with the hardest of sudokus. We have tested the program with a set of sudoku statements, which have been solved manually too for comparison.
-We have found that the program finds a solution for 91% of the statements. On the bright side, when a solution is found it always matches with the manually found one, so we assume that all solutions that the program finds may be regarded as correct.
+According to our tests, the program finds a solution for 91% of the statements. On the bright side, when a solution is found it always matches with the manually found one, so we assume that all solutions that the program finds may be regarded as correct.
