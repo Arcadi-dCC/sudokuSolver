@@ -17,6 +17,9 @@ Simply download and extract the compressed folder suitable to your machine accor
  - 32-bit: `sudokuSolver_x86.zip`
  - 64-bit: `sudokuSolver_x64.zip`
 
+> [!NOTE]
+> The 32-bit version should work on all Windows machines. If the 64-bit version does not work on yours, try the 32-bit one.
+
 > From now on, the final part of the names from folders and files, be it `_x86` or `_x64`, will be omitted.
 
 The `src` folder contains the code of the program, which is not necessary to download as a user.
