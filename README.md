@@ -68,7 +68,7 @@ Note that the program does not check if the sudoku has been solved previosly. Th
 ## Error messages
 If something goes wrong during the solution finding process, the sudoku will appear unsolved in the cmd window. Below, an error message will explain the issue:
 
- - **`There is something wrong with the statement file. Please review it.`** Some of the rules laid out in [User Guide](user-guide)>Step 3 have not been follow. Please, read them again and modify the formatting of statement.txt according to them.
+ - **`There is something wrong with the statement file. Please review it.`** Some of the rules laid out in [User Guide](user-guide)>Step 3 have not been followed. Please, read them again and modify the formatting of statement.txt according to them.
 
  - **`The sudoku could not be solved.`** Usually, this happens when a statement has too few known elements for it to be solvable. Please review your statement in case that some elements are missing.
 If this is not the case, your sudoku might actually be too difficult! Sudoku Solver is still in an early version and has a hard time dealing with the hardest of sudokus. Sorry for the inconvenience!
